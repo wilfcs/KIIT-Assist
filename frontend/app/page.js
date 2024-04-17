@@ -2,6 +2,7 @@
 import Image from "next/image";
 import ChatBot from "./components/ChatBot";
 import { useState } from "react";
+import BotpressBot from "./components/BotpressBot";
 
 export default function Home() {
   const [response, setResponse] = useState("...");
@@ -27,6 +28,7 @@ export default function Home() {
         <ChatBot onSubmit={handleSubmit} />
         {response && <p>Response: {response}</p>}
       </div>
+      <BotpressBot/>
     </main>
   );
 }
