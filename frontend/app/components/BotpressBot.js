@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 
 const BotpressBot = () => {
@@ -8,7 +9,7 @@ const BotpressBot = () => {
     document.body.appendChild(script1);
 
     const script2 = document.createElement("script");
-    script2.src =process.env.NEXT_PUBLIC_BOTPRESS_WEBCHAT_CONFIG_SCRIPT_URL;
+    script2.src = process.env.NEXT_PUBLIC_BOTPRESS_WEBCHAT_CONFIG_SCRIPT_URL;
     script2.async = true;
     script2.defer = true;
     document.body.appendChild(script2);
