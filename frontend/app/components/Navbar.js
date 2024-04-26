@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="block w-full max-w-screen-xl px-4 py-3 mx-auto bg-white border border-white/80 shadow-md rounded-xl bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200">
+    <nav className="block w-full max-w-screen-xl px-4 py-3 mx-auto bg-white border border-white/80 shadow-md rounded-xl bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 fixed glassify">
       <div className="flex items-center justify-between">
         <Link
           href="/"
