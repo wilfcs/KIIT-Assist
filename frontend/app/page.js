@@ -1,18 +1,48 @@
 "use client"
 import BotpressBot from "./components/BotpressBot";
+import Carousel from "./components/Carousel";
 import Navbar from "./components/Navbar";
+import SilderImg01 from "@/public/KIIT-University-Campus.jpg";
+import SilderImg02 from "@/public/KIIT Sports.jpg";
+import SilderImg03 from "@/public/KIIT Innovation.jpg";
+import SilderImg04 from "@/public/KIIT Diversity.jpg";
+import SilderIcon01 from "@/public/university-campus.png";
+import SilderIcon02 from "@/public/sports.png";
+import SilderIcon03 from "@/public/together.png";
+import SilderIcon04 from "@/public/innovation.png";
 
 export default function Home() {
-  const handleChatbotClick = () => {
-    // Open chatbot window or modal
-  };
+  const items = [
+    {
+      img: SilderImg01,
+      desc: "Campus",
+      buttonIcon: SilderIcon01,
+    },
+    {
+      img: SilderImg02,
+      desc: "Sports",
+      buttonIcon: SilderIcon02,
+    },
+    {
+      img: SilderImg03,
+      desc: "Diversity",
+      buttonIcon: SilderIcon03,
+    },
+    {
+      img: SilderImg04,
+      desc: "Innovation",
+      buttonIcon: SilderIcon04,
+    },
+  ];
   return (
     <main className="">
       <Navbar />
-      <div className="min-h-screen flex flex-col">
+      <div className=" flex flex-col pt-20">
         {/* Placeholder for carousel */}
-        <div className="flex-1 bg-gray-100">
-          {/* Add your carousel implementation here */}
+        <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-2">
+          <div className="flex justify-center">
+            <Carousel items={items} carouselHeight="h-128" itemHeight="h-96"/>
+          </div>
         </div>
 
         <div className="bg-white py-16">
