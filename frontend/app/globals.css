@@ -72,6 +72,7 @@ body {
 /* Chat messages */
 .chat-messages {
   margin-bottom: 20px;
+  /* overflow: scroll; */
 }
 
 /* User message */
@@ -154,4 +155,51 @@ body {
 
 .voice-input:hover {
   background-color: rgb(66, 78, 189);
+}
+
+.transcriptButtons{
+  display: flex;
+
+}
+.transcriptButtons button{
+  background-color: #a3aaeb;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  width: 200px;
+}
+
+.transcriptButtons button:hover{
+  background-color: #7c87ea;
+}
+.transcript-box {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.716);
+  color: #b5b5b5;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+  pointer-events: none;
+  margin: 20px auto 0;
+  width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  /* Add this line to center the text */
+}
+
+.transcript-box.active {
+  opacity: 1;
+  pointer-events: auto;
+  width: auto;
+  max-width: 80%;
+  overflow: visible;
+  white-space: normal;
 }
